@@ -11,6 +11,8 @@
 		E3E945A027BC268A00AB605F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E9459F27BC268A00AB605F /* ContentView.swift */; };
 		E3E945A227BC268B00AB605F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E945A127BC268B00AB605F /* Assets.xcassets */; };
 		E3E945A527BC268B00AB605F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E945A427BC268B00AB605F /* Preview Assets.xcassets */; };
+		E3E945AC27BC279400AB605F /* LightCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E945AB27BC279400AB605F /* LightCircle.swift */; };
+		E3E945AE27BC2CFF00AB605F /* TapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E945AD27BC2CFF00AB605F /* TapButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E3E9459F27BC268A00AB605F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3E945A127BC268B00AB605F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3E945A427BC268B00AB605F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E3E945AB27BC279400AB605F /* LightCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCircle.swift; sourceTree = "<group>"; };
+		E3E945AD27BC2CFF00AB605F /* TapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				E3E9459D27BC268A00AB605F /* TafficLightAppApp.swift */,
 				E3E9459F27BC268A00AB605F /* ContentView.swift */,
+				E3E945AD27BC2CFF00AB605F /* TapButton.swift */,
+				E3E945AB27BC279400AB605F /* LightCircle.swift */,
 				E3E945A127BC268B00AB605F /* Assets.xcassets */,
 				E3E945A327BC268B00AB605F /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				E3E945A027BC268A00AB605F /* ContentView.swift in Sources */,
 				E3E9459E27BC268A00AB605F /* TafficLightAppApp.swift in Sources */,
+				E3E945AC27BC279400AB605F /* LightCircle.swift in Sources */,
+				E3E945AE27BC2CFF00AB605F /* TapButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
