@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TapButton: View {
     let buttonText: String
+    let action: () -> ()
  
     var body: some View {
-        Button(action: {}) {
+        Button(action: action) {
             Text(buttonText)
                 .frame(width: 100, height: 50)
                 .font(.title)
@@ -22,8 +23,8 @@ struct TapButton: View {
     }
 }
 
-struct TapButton_Previews: PreviewProvider {
-    static var previews: some View {
-        TapButton(buttonText: "Start")
-    }
-}
+//struct TapButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TapButton(buttonText: "Start", action: () -> ())
+//    }
+//}

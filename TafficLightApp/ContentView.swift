@@ -8,56 +8,53 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let lightOn: Double = 1
-    private let lightOff: Double  = 0.5
-    @State private var redLight: Color = .red.opacity(0.5)
-    @State private var yellowLight: Color = .yellow.opacity(0.5)
-    @State private var greenLight: Color = .green.opacity(0.5)
+    @State private var redOpacity: Double = 0.5
+    @State private var yellowOpacity: Double = 0.5
+    @State private var greenOpacity: Double = 0.5
     @State private var buttonText = "Start"
-    @State private var currentLight: Color = .red.opacity(1)
+    @State private var currentColor: Color = .green
 
     
     var body: some View {
         VStack{
             VStack{
-           LightCircle(color: redLight)
-           LightCircle(color: yellowLight)
-           LightCircle(color: greenLight)
+                LightCircle(color: .red, opacity: redOpacity)
+                LightCircle(color: .yellow, opacity: yellowOpacity)
+                LightCircle(color: .green, opacity: greenOpacity)
             }.padding(.top, 45)
             
             Spacer()
             
-         //   TapButton(buttonText: buttonText)
-            
-            Button(action: {changeColor()}) {
-                Text(buttonText)
-                    .frame(width: 100, height: 50)
-                    .font(.title)
-                    .foregroundColor(Color.white)
-                    .background(.blue)
-                    .cornerRadius(15)
+            TapButton(buttonText: buttonText) {
+                changeColor()
             }
         }
     }
     
    private func changeColor() {
+       let lightOn: Double = 1
+       let lightOff: Double  = 0.5
+       
         if buttonText == "Start" {
             buttonText = "Next"
         }
         
-        switch currentLight {
-        case .red.opacity(lightOn):
-            redLight = .red.opacity(lightOn)
-            greenLight = .green.opacity(lightOff)
-            currentLight = .yellow.opacity(lightOn)
-        case .yellow.opacity(lightOn):
-            yellowLight = .yellow.opacity(lightOn)
-            redLight = .red.opacity(lightOff)
-            currentLight = .green.opacity(lightOn)
+        switch currentColor {
+        case .red:
+            redOpacity = lightOff
+            greenOpacity = lightOff
+            yellowOpacity = lightOn
+            currentColor = .yellow
+        case .yellow:
+            yellowOpacity = lightOff
+            redOpacity = lightOff
+            greenOpacity = lightOn
+            currentColor = .green
         default:
-            greenLight = .green.opacity(lightOn)
-            yellowLight = .yellow.opacity(lightOff)
-            currentLight = .red.opacity(lightOn)
+            greenOpacity = lightOff
+            yellowOpacity = lightOff
+            redOpacity = lightOn
+            currentColor = .red
         }
     }
 }
